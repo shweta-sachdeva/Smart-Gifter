@@ -1,5 +1,8 @@
-package com.smartgifter.navigationdrawer;
+package com.smartgifter.controller;
 
+/**
+ * Created by mohit on 3/26/2016.
+ */
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -13,7 +16,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.mohit.smartgifter.R;
+
+import com.facebook.FacebookSdk;
 
 public class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -46,7 +50,8 @@ public class DrawerActivity extends AppCompatActivity
 //        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 //        navigationView.setNavigationItemSelectedListener(this);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drawer);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        setContentView(R.layout.activity_sample_drawer);
 
         // Set a Toolbar to replace the ActionBar.
         toolbar = (Toolbar) findViewById(R.id.toolbar);

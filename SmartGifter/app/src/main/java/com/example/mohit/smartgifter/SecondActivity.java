@@ -1,3 +1,4 @@
+/*
 package com.example.mohit.smartgifter;
 
 import android.app.Activity;
@@ -14,9 +15,11 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+*/
 /**
  * Created by mohit on 3/14/2016.
- */
+ *//*
+
 public class SecondActivity extends Activity {
 
     ListView listView ;
@@ -68,3 +71,4 @@ public class SecondActivity extends Activity {
 
 }
 
+*/

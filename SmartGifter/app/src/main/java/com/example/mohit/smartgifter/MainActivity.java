@@ -1,3 +1,4 @@
+/*
 package com.example.mohit.smartgifter;
 
 
@@ -72,7 +73,8 @@ public class MainActivity extends Activity {
         callbackManager.onActivityResult(reqCode, resCode, i);
     }
 
-    /*private void feeds(AccessToken accessToken){
+    */
+/*private void feeds(AccessToken accessToken){
         new GraphRequest(
                 AccessToken.getCurrentAccessToken(),
                 "/me/home",
@@ -80,7 +82,11 @@ public class MainActivity extends Activity {
                 HttpMethod.GET,
                 new GraphRequest.Callback() {
                     public void onCompleted(GraphResponse response) {
-            *//* handle the result *//*
+            *//*
+*/
+/* handle the result *//*
+*/
+/*
                        try{
                            JSONArray feedArray = response.getJSONObject().getJSONArray("data");
                            for(int i=0; i<feedArray.length();i++){
@@ -93,7 +99,8 @@ public class MainActivity extends Activity {
                     }
                 }
         ).executeAsync();
-    }*/
+    }*//*
+
     private void friendList(AccessToken accessToken){
 
 
@@ -104,7 +111,9 @@ public class MainActivity extends Activity {
                 com.facebook.HttpMethod.GET,
                 new GraphRequest.Callback() {
                     public void onCompleted(GraphResponse response) {
-            /* handle the result */
+            */
+/* handle the result *//*
+
                        try {
                            JSONArray friendList = response.getJSONObject().getJSONArray("data");
                            System.out.println("friendList Size:********"+friendList.length());
@@ -157,4 +166,4 @@ public class MainActivity extends Activity {
         request.setParameters(parameters);
         request.executeAsync();
     }
-}
+}*/
