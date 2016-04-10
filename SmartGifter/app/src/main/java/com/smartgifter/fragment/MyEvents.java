@@ -2,6 +2,8 @@ package com.smartgifter.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -44,6 +46,11 @@ public class MyEvents extends Fragment {
             public void onClick(View view) {
                 Snackbar.make(view, "Create an event", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                Fragment createEvent = new CreateEvent();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.list, createEvent);
+                fragmentTransaction.commit();
             }
         });
 

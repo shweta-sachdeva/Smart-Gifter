@@ -8,7 +8,7 @@ import android.os.Parcelable;
  */
 public class User implements Parcelable {
 
-    private int fbUserId;
+    private long fbUserId;
     private String fbUserName;
 
     /**
@@ -43,7 +43,7 @@ public class User implements Parcelable {
     /**
      * Create a User model object from arguments
      */
-    public User(int fbUserId,String fbUserName) {
+    public User(long fbUserId,String fbUserName) {
         this.fbUserId = fbUserId;
         this.fbUserName = fbUserName;
     }
@@ -64,7 +64,7 @@ public class User implements Parcelable {
      */
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(this.fbUserId);
+        dest.writeLong(this.fbUserId);
         dest.writeString(this.fbUserName);
     }
 
@@ -76,11 +76,11 @@ public class User implements Parcelable {
         this.fbUserName = fbUserName;
     }
 
-    public int getId() {
+    public long getId() {
         return fbUserId;
     }
 
-    public void setId(int fbUserId) {
+    public void setId(long fbUserId) {
         this.fbUserId = fbUserId;
     }
 

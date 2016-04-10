@@ -12,8 +12,8 @@ public class Event implements Parcelable {
 
     private int eventId;
     private String eventTitle;
-    private Calendar eventDate;
-    private int eventOwnerId;
+    private String eventDate;
+    private long eventOwnerId;
     private String itemName;
     private String itemDescription;
     private int itemPrice;
@@ -43,8 +43,8 @@ public class Event implements Parcelable {
         eventTitle = p.readString();
         Calendar cal = Calendar.getInstance();
         cal.setTimeInMillis(p.readLong());
-        eventDate = cal;
-        eventOwnerId = p.readInt();
+        eventDate = p.readString();
+        eventOwnerId = p.readLong();
         itemName = p.readString();
         itemDescription = p.readString();
         itemPrice = p.readInt();
@@ -53,7 +53,7 @@ public class Event implements Parcelable {
     /**
      * Create a Event model object from arguments
      */
-    public Event(int eventId,String eventTitle,Calendar eventDate,int eventOwnerId,String itemName, String itemDescription,int itemPrice) {
+    public Event(int eventId,String eventTitle,String eventDate,long eventOwnerId,String itemName, String itemDescription,int itemPrice) {
         this.eventId = eventId;
         this.eventTitle = eventTitle;
         this.eventDate = eventDate;
@@ -81,8 +81,8 @@ public class Event implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(this.eventId);
         dest.writeString(this.eventTitle);
-        dest.writeLong(this.eventDate.getTimeInMillis());
-        dest.writeInt(this.eventOwnerId);
+        dest.writeString(this.eventDate);
+        dest.writeLong(this.eventOwnerId);
         dest.writeString(this.itemName);
         dest.writeString(this.itemDescription);
         dest.writeInt(this.itemPrice);
@@ -104,16 +104,16 @@ public class Event implements Parcelable {
         this.eventId = eventId;
     }
 
-    public Calendar getEventDate() {
+    public String getEventDate() {
         return eventDate;
     }
-    public void setEventDate(Calendar eventDate) {
+    public void setEventDate(String eventDate) {
         this.eventDate = eventDate;
     }
-    public int getEventOwnerId() {
+    public long getEventOwnerId() {
          return eventOwnerId;
     }
-    public void setEventOwnerId() {
+    public void setEventOwnerId(long eventOwnerId) {
         this.eventOwnerId = eventOwnerId;
     }
     public String getItemName() {

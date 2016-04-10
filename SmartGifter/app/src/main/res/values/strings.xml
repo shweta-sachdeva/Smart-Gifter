@@ -7,4 +7,14 @@
     <string name="action_settings">Settings</string>
     <string name="openDrawer">Open</string>
     <string name="closeDrawer">Close</string>
+    <string name="event_name_hint"><font size="15"><i>What is the event?</i></font></string>
+    <string name="item_name_hint"><font size="15"><i>What you want for this event?</i></font></string>
+    <string name="event_date_hint"><font size="15"><i>When is it?</i></font></string>
+    <string name="item_price_hint"><font size="15"><i>What is the price of this item?</i></font></string>
+    <string name="item_description_hint"><font size="15"><i>Do you want to describe the item?</i></font></string>
+    <string name="error_msg_event_name">"Event name cannot be empty"</string>
+    <string name="error_msg_event_date">"Event date cannot be empty"</string>
+    <string name="error_msg_item_name">"Item name cannot be empty"</string>
+    <string name="error_msg_item_price">"Item price cannot be empty"</string>
+
 </resources>
